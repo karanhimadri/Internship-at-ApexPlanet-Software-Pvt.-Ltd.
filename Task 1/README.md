@@ -53,21 +53,3 @@ task-1/
 A screen recording of this project has been uploaded to **LinkedIn** as part of the internship submission process.
 
 ---
-
-## 📄 Internship Details
-
-- **Internship:** Web Development (HTML, CSS & JavaScript)  
-- **Organization:** ApexPlanet Software Pvt. Ltd.  
-- **Task:** Task 1 – Basics of Web Development  
-
----
-
-## 👤 Author
-
-**Himadri Karan**  
-- GitHub: [https://github.com/karanhimadri](https://github.com/karanhimadri)  
-- LinkedIn: [https://linkedin.com/in/himadrikaran](https://linkedin.com/in/himadrikaran)
-
----
-
-✅ *This project is created for educational and internship purposes.*
