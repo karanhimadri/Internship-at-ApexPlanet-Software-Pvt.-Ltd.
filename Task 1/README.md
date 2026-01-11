@@ -31,9 +31,6 @@ task-1/
 ```
 ---
 
-
----
-
 ## ✨ Features Implemented
 
 - Semantic and professional HTML layout

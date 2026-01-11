@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 2 | Intermediate Web Development</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <nav>
+    <h2>Task 2</h2>
+    <p>HTML • CSS • JavaScript</p>
+  </nav>
+
+  <main class="container">
+
+    <!-- Contact Form -->
+    <section class="card">
+      <h3>Contact Form</h3>
+      <form id="contactForm">
+        <label>Name</label>
+        <input type="text" id="name">
+
+        <label>Email</label>
+        <input type="email" id="email">
+
+        <label>Message</label>
+        <textarea id="message"></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <!-- To-Do List -->
+    <section class="card">
+      <h3>To-Do List</h3>
+      <div class="todo-input">
+        <input type="text" id="taskInput" placeholder="Enter task">
+        <button id="addTask">Add</button>
+      </div>
+      <ul id="taskList"></ul>
+    </section>
+
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
