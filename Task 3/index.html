@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 3 | Advanced JavaScript</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>Task 3 – Advanced Styling & JavaScript</h1>
+    <p>Quiz + API Data Fetch</p>
+  </header>
+
+  <main class="container">
+
+    <!-- Quiz Section -->
+    <section class="card" id="quizSection">
+      <h2>JavaScript Quiz</h2>
+      <p id="question"></p>
+
+      <div class="options">
+        <button class="option" onclick="selectAnswer(0)"></button>
+        <button class="option" onclick="selectAnswer(1)"></button>
+        <button class="option" onclick="selectAnswer(2)"></button>
+        <button class="option" onclick="selectAnswer(3)"></button>
+      </div>
+
+      <button id="nextBtn" onclick="nextQuestion()">Next</button>
+    </section>
+
+    <!-- API Section -->
+    <section class="card">
+      <h2>Random Joke (API)</h2>
+      <p id="joke">Click below to load a joke</p>
+      <button onclick="fetchJoke()">Get Joke</button>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2025 Himadri Karan</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
