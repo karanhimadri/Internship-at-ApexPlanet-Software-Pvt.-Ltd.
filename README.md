@@ -69,7 +69,7 @@ apexplanet-web-development/
 
 🔹 **Task 4 – Full Project Implementation**
 
-- Designed and developed a personal portfolio website
+- Designed and developed a personal portfolio website, To-Do app and e-commerce listing site
 - Implemented localStorage for data persistence
 - Built interactive pages with filtering and sorting features
 

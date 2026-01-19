@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List & Notes App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <h1>📝 My Tasks & Notes</h1>
+            <p class="subtitle">Stay organized, stay productive</p>
+        </header>
+
+        <!-- Tab Navigation -->
+        <div class="tab-navigation">
+            <button class="tab-btn active" data-tab="todos">To-Do List</button>
+            <button class="tab-btn" data-tab="notes">Notes</button>
+        </div>
+
+        <!-- To-Do List Section -->
+        <div id="todos" class="tab-content active">
+            <div class="content-wrapper">
+                <!-- Add Task Form -->
+                <div class="add-task-section">
+                    <h2>Add New Task</h2>
+                    <form id="todoForm" class="task-form">
+                        <input type="text" id="taskInput" placeholder="What needs to be done?" required>
+                        <div class="form-row">
+                            <select id="taskPriority">
+                                <option value="low">Low Priority</option>
+                                <option value="medium" selected>Medium Priority</option>
+                                <option value="high">High Priority</option>
+                            </select>
+                            <input type="date" id="taskDate">
+                        </div>
+                        <button type="submit" class="btn-primary">
+                            <span>+ Add Task</span>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Filter Options -->
+                <div class="filter-section">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="active">Active</button>
+                    <button class="filter-btn" data-filter="completed">Completed</button>
+                    <button class="filter-btn" data-filter="high">High Priority</button>
+                </div>
+
+                <!-- Tasks List -->
+                <div class="tasks-container">
+                    <div id="tasksList" class="tasks-list">
+                        <!-- Tasks will be dynamically added here -->
+                    </div>
+                    <div class="tasks-stats">
+                        <span id="tasksCount">0 tasks</span>
+                        <button id="clearCompleted" class="btn-clear">Clear Completed</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Notes Section -->
+        <div id="notes" class="tab-content">
+            <div class="content-wrapper">
+                <!-- Add Note Form -->
+                <div class="add-note-section">
+                    <h2>Create New Note</h2>
+                    <form id="noteForm" class="note-form">
+                        <input type="text" id="noteTitle" placeholder="Note title" required>
+                        <textarea id="noteContent" placeholder="Write your note here..." rows="5" required></textarea>
+                        <div class="form-row">
+                            <select id="noteCategory">
+                                <option value="personal">Personal</option>
+                                <option value="work">Work</option>
+                                <option value="ideas">Ideas</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <button type="submit" class="btn-primary">
+                                <span>+ Save Note</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Notes Filter -->
+                <div class="filter-section">
+                    <button class="note-filter-btn active" data-category="all">All Notes</button>
+                    <button class="note-filter-btn" data-category="personal">Personal</button>
+                    <button class="note-filter-btn" data-category="work">Work</button>
+                    <button class="note-filter-btn" data-category="ideas">Ideas</button>
+                    <button class="note-filter-btn" data-category="other">Other</button>
+                </div>
+
+                <!-- Notes Grid -->
+                <div id="notesList" class="notes-grid">
+                    <!-- Notes will be dynamically added here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <p>All data is saved locally in your browser</p>
+            <a href="../index.html" class="back-link">← Back to Task 4</a>
+        </footer>
+    </div>
+
+    <!-- Edit Note Modal -->
+    <div id="editNoteModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Edit Note</h2>
+            <form id="editNoteForm">
+                <input type="hidden" id="editNoteId">
+                <input type="text" id="editNoteTitle" placeholder="Note title" required>
+                <textarea id="editNoteContent" placeholder="Write your note here..." rows="5" required></textarea>
+                <select id="editNoteCategory">
+                    <option value="personal">Personal</option>
+                    <option value="work">Work</option>
+                    <option value="ideas">Ideas</option>
+                    <option value="other">Other</option>
+                </select>
+                <button type="submit" class="btn-primary">Update Note</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

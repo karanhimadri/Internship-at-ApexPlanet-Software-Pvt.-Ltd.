@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Listing - E-Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="header-content">
+                    <h1 class="logo">🛍️ E-Shop</h1>
+                    <div class="header-actions">
+                        <div class="search-box">
+                            <input type="text" id="searchInput" placeholder="Search products...">
+                            <button id="searchBtn">🔍</button>
+                        </div>
+                        <div class="cart-icon">
+                            <span>🛒</span>
+                            <span class="cart-count" id="cartCount">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="container">
+                <div class="content-grid">
+                    <!-- Sidebar Filters -->
+                    <aside class="sidebar">
+                        <div class="filter-section">
+                            <h2 class="filter-title">Filters</h2>
+                            
+                            <!-- Category Filter -->
+                            <div class="filter-group">
+                                <h3>Categories</h3>
+                                <div class="filter-options" id="categoryFilters">
+                                    <label class="filter-option">
+                                        <input type="checkbox" value="all" checked>
+                                        <span>All Products</span>
+                                    </label>
+                                    <label class="filter-option">
+                                        <input type="checkbox" value="electronics">
+                                        <span>Electronics</span>
+                                    </label>
+                                    <label class="filter-option">
+                                        <input type="checkbox" value="clothing">
+                                        <span>Clothing</span>
+                                    </label>
+                                    <label class="filter-option">
+                                        <input type="checkbox" value="home">
+                                        <span>Home & Garden</span>
+                                    </label>
+                                    <label class="filter-option">
+                                        <input type="checkbox" value="sports">
+                                        <span>Sports</span>
+                                    </label>
+                                    <label class="filter-option">
+                                        <input type="checkbox" value="books">
+                                        <span>Books</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Price Filter -->
+                            <div class="filter-group">
+                                <h3>Price Range</h3>
+                                <div class="price-inputs">
+                                    <input type="number" id="minPrice" placeholder="Min" min="0">
+                                    <span>to</span>
+                                    <input type="number" id="maxPrice" placeholder="Max" min="0">
+                                </div>
+                                <button id="applyPriceFilter" class="btn-filter">Apply</button>
+                            </div>
+
+                            <!-- Rating Filter -->
+                            <div class="filter-group">
+                                <h3>Rating</h3>
+                                <div class="filter-options" id="ratingFilters">
+                                    <label class="filter-option">
+                                        <input type="radio" name="rating" value="all" checked>
+                                        <span>All Ratings</span>
+                                    </label>
+                                    <label class="filter-option">
+                                        <input type="radio" name="rating" value="4">
+                                        <span>⭐ 4 & above</span>
+                                    </label>
+                                    <label class="filter-option">
+                                        <input type="radio" name="rating" value="3">
+                                        <span>⭐ 3 & above</span>
+                                    </label>
+                                    <label class="filter-option">
+                                        <input type="radio" name="rating" value="2">
+                                        <span>⭐ 2 & above</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Clear Filters -->
+                            <button id="clearFilters" class="btn-clear-filters">Clear All Filters</button>
+                        </div>
+                    </aside>
+
+                    <!-- Products Section -->
+                    <section class="products-section">
+                        <!-- Toolbar -->
+                        <div class="toolbar">
+                            <div class="results-info">
+                                <span id="resultsCount">0 products found</span>
+                            </div>
+                            <div class="sort-options">
+                                <label for="sortSelect">Sort by:</label>
+                                <select id="sortSelect">
+                                    <option value="default">Default</option>
+                                    <option value="price-low">Price: Low to High</option>
+                                    <option value="price-high">Price: High to Low</option>
+                                    <option value="rating-high">Rating: High to Low</option>
+                                    <option value="name-asc">Name: A to Z</option>
+                                    <option value="name-desc">Name: Z to A</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Products Grid -->
+                        <div id="productsGrid" class="products-grid">
+                            <!-- Products will be dynamically loaded here -->
+                        </div>
+
+                        <!-- No Results Message -->
+                        <div id="noResults" class="no-results" style="display: none;">
+                            <div class="no-results-icon">🔍</div>
+                            <h3>No products found</h3>
+                            <p>Try adjusting your filters or search terms</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2026 E-Shop. Product data is for demonstration purposes.</p>
+                <a href="../index.html" class="back-link">← Back to Task 4</a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Product Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modalProductDetails">
+                <!-- Product details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
